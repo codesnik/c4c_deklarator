@@ -1,0 +1,104 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/layout";
+@import "compass/css3";
+@import "blueprint/debug";
+
+@import "partials/toolbox";
+@import "partials/forms";
+
+html {
+    height: 100%;
+}
+
+body {
+    color: #666666;
+    font-size: 11px;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+a { text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: underline; }
+a:visited { text-decoration: none; cursor: pointer; }
+
+//////////////////////////////////////////////////
+///////         Blueprint containers       ///////
+//////////////////////////////////////////////////
+
+#container {
+    @include container;
+    /* @include showgrid; // for development purposes*/
+}
+
+#topBar {
+   @include column(24, true);
+   @include prepend-top(5px);
+   @include append-bottom(5px);
+}
+
+#headingBar .logo {
+    @include column ( 4 );
+}
+
+#headingBar #authPanel {
+    @include column ( 20, true );
+}
+
+aside#sidebar {
+    @include column ( 4 );
+}
+
+section#mainContent {
+    @include column ( 20, true );
+}
+
+
+section#mainContent, aside#sidebar {
+    @include prepend-top (20px);
+}
+
+footer {
+    @include column (24, true);
+}
+
+//////////////////////////////////////////////////
+
+#topBar #links {
+   @include float-right;
+}
+
+#topBar #links a {
+    font-size: 11px;
+    font-family: "Lucida Grande","Lucida Sans",Arial,Helvetica,Sans-Serif;
+    border-right: 1px solid #CCCCCC;
+    color: #444444;
+    font-weight: bold;
+    padding: 0 9px;
+    text-shadow: 1px 1px #FFFFFF;
+}
+
+#topBar #links a:last-child { border-right: none; }
+
+#headingBar {
+    @include column(24, true);
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 5px;
+}
+
+#headingBar #authPanel  {
+    min-width: 100px;
+}
+
+#headingBar #authPanel ul {
+    @include float-right;
+    text-align: right;
+    margin-right: 20px;
+}
+
+#headingBar #authPanel ul li {
+    float: left;
+    min-width: 40px;
+    text-align: center !important;
+    margin-right: 5px;
+}
+
