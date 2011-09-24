@@ -1,0 +1,12 @@
+= simple_form_for(@declaration) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :name
+    = f.association :declaration_type
+    = f.input :published_at
+    = f.input :for_year
+    = f.association :office
+
+  .actions
+    = f.button :submit

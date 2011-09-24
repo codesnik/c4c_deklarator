@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @declared_real_estate.name
+%p
+  %b Read estate type:
+  = @declared_real_estate.read_estate_type
+%p
+  %b Area:
+  = @declared_real_estate.area
+%p
+  %b Country:
+  = @declared_real_estate.country
+%p
+  %b Region:
+  = @declared_real_estate.region
+%p
+  %b Tenancy:
+  = @declared_real_estate.tenancy
+%p
+  %b Ownership type:
+  = @declared_real_estate.ownership_type
+%p
+  %b Share:
+  = @declared_real_estate.share
+
+= link_to 'Edit', edit_declared_real_estate_path(@declared_real_estate)
+\|
+= link_to 'Back', declared_real_estates_path

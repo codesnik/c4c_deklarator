@@ -1,5 +1,13 @@
 C4cDeklarator::Application.routes.draw do
 
+  resources :declared_transports
+
+  resources :declared_real_estates
+
+  resources :declared_incomes
+
+  resources :declarations
+
   resources :positions
 
   resources :offices

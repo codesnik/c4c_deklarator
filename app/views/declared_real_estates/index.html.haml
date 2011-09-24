@@ -1,0 +1,33 @@
+%h1 Listing declared_real_estates
+
+%table
+  %tr
+    %th Name
+    %th Read estate type
+    %th Area
+    %th Country
+    %th Region
+    %th Tenancy
+    %th Ownership type
+    %th Share
+    %th
+    %th
+    %th
+
+  - @declared_real_estates.each do |declared_real_estate|
+    %tr
+      %td= declared_real_estate.name
+      %td= declared_real_estate.read_estate_type
+      %td= declared_real_estate.area
+      %td= declared_real_estate.country
+      %td= declared_real_estate.region
+      %td= declared_real_estate.tenancy
+      %td= declared_real_estate.ownership_type
+      %td= declared_real_estate.share
+      %td= link_to 'Show', declared_real_estate
+      %td= link_to 'Edit', edit_declared_real_estate_path(declared_real_estate)
+      %td= link_to 'Destroy', declared_real_estate, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Declared real estate', new_declared_real_estate_path

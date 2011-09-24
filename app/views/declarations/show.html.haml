@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @declaration.name
+%p
+  %b Declaration type:
+  = @declaration.declaration_type
+%p
+  %b Published at:
+  = @declaration.published_at
+%p
+  %b For year:
+  = @declaration.for_year
+%p
+  %b Office:
+  = @declaration.office
+
+= link_to 'Edit', edit_declaration_path(@declaration)
+\|
+= link_to 'Back', declarations_path

@@ -1,0 +1,2 @@
+module DeclaredRealEstatesHelper
+end

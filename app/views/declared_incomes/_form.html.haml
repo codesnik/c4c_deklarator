@@ -1,0 +1,10 @@
+= simple_form_for(@declared_income) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.association :declaration
+    = f.input :amount
+    = f.input :description
+
+  .actions
+    = f.button :submit

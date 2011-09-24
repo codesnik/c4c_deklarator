@@ -1,0 +1,16 @@
+= simple_form_for(@declared_real_estate) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.association :declaration
+    = f.input :name
+    = f.association :read_estate_type
+    = f.input :area
+    = f.input :country
+    = f.input :region
+    = f.association :tenancy
+    = f.association :ownership_type
+    = f.input :share
+
+  .actions
+    = f.button :submit

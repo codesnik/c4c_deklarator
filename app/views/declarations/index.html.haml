@@ -1,0 +1,27 @@
+%h1 Listing declarations
+
+%table
+  %tr
+    %th Name
+    %th Declaration type
+    %th Published at
+    %th For year
+    %th Office
+    %th
+    %th
+    %th
+
+  - @declarations.each do |declaration|
+    %tr
+      %td= declaration.name
+      %td= declaration.declaration_type
+      %td= declaration.published_at
+      %td= declaration.for_year
+      %td= declaration.office
+      %td= link_to 'Show', declaration
+      %td= link_to 'Edit', edit_declaration_path(declaration)
+      %td= link_to 'Destroy', declaration, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Declaration', new_declaration_path

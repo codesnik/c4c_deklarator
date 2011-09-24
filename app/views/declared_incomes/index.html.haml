@@ -1,0 +1,23 @@
+%h1 Listing declared_incomes
+
+%table
+  %tr
+    %th Declaration
+    %th Amount
+    %th Description
+    %th
+    %th
+    %th
+
+  - @declared_incomes.each do |declared_income|
+    %tr
+      %td= declared_income.declaration
+      %td= declared_income.amount
+      %td= declared_income.description
+      %td= link_to 'Show', declared_income
+      %td= link_to 'Edit', edit_declared_income_path(declared_income)
+      %td= link_to 'Destroy', declared_income, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Declared income', new_declared_income_path

@@ -1,0 +1,15 @@
+= simple_form_for(@declared_transport) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :name
+    = f.association :transport_type
+    = f.association :car_vendor
+    = f.association :car_model
+    = f.input :production_year
+    = f.association :tenancy
+    = f.association :ownership_type
+    = f.input :share
+
+  .actions
+    = f.button :submit

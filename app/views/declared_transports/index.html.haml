@@ -1,0 +1,33 @@
+%h1 Listing declared_transports
+
+%table
+  %tr
+    %th Name
+    %th Transport type
+    %th Car vendor
+    %th Car model
+    %th Production year
+    %th Tenancy
+    %th Ownership type
+    %th Share
+    %th
+    %th
+    %th
+
+  - @declared_transports.each do |declared_transport|
+    %tr
+      %td= declared_transport.name
+      %td= declared_transport.transport_type
+      %td= declared_transport.car_vendor
+      %td= declared_transport.car_model
+      %td= declared_transport.production_year
+      %td= declared_transport.tenancy
+      %td= declared_transport.ownership_type
+      %td= declared_transport.share
+      %td= link_to 'Show', declared_transport
+      %td= link_to 'Edit', edit_declared_transport_path(declared_transport)
+      %td= link_to 'Destroy', declared_transport, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Declared transport', new_declared_transport_path

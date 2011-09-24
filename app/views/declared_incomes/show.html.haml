@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Declaration:
+  = @declared_income.declaration
+%p
+  %b Amount:
+  = @declared_income.amount
+%p
+  %b Description:
+  = @declared_income.description
+
+= link_to 'Edit', edit_declared_income_path(@declared_income)
+\|
+= link_to 'Back', declared_incomes_path

@@ -1,0 +1,2 @@
+module DeclaredIncomesHelper
+end

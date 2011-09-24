@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @declared_transport.name
+%p
+  %b Transport type:
+  = @declared_transport.transport_type
+%p
+  %b Car vendor:
+  = @declared_transport.car_vendor
+%p
+  %b Car model:
+  = @declared_transport.car_model
+%p
+  %b Production year:
+  = @declared_transport.production_year
+%p
+  %b Tenancy:
+  = @declared_transport.tenancy
+%p
+  %b Ownership type:
+  = @declared_transport.ownership_type
+%p
+  %b Share:
+  = @declared_transport.share
+
+= link_to 'Edit', edit_declared_transport_path(@declared_transport)
+\|
+= link_to 'Back', declared_transports_path
