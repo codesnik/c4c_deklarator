@@ -44,18 +44,23 @@ a:visited { text-decoration: none; cursor: pointer; }
     @include column ( 20, true );
 }
 
-aside#sidebar {
-    @include column ( 4 );
+nav#main_navigation {
+    @include column ( 24, true );
+    @include prepend-top(10px);
+    @include append-bottom(15px);
+}
+
+nav#main_navigation ul li {
+    float: left;
+    min-width: 40px;
+    text-align: center !important;
+    margin-right: 5px;
 }
 
 section#mainContent {
-    @include column ( 20, true );
+    @include column ( 24, true );
 }
 
-
-section#mainContent, aside#sidebar {
-    @include prepend-top (20px);
-}
 
 footer {
     @include column (24, true);
@@ -101,4 +106,3 @@ footer {
     text-align: center !important;
     margin-right: 5px;
 }
-

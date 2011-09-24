@@ -1,0 +1,25 @@
+%h1 Listing positions
+
+%table
+  %tr
+    %th Name
+    %th Year
+    %th Person
+    %th Office
+    %th
+    %th
+    %th
+
+  - @positions.each do |position|
+    %tr
+      %td= position.name
+      %td= position.year
+      %td= position.person.full_name
+      %td= position.office.name
+      %td= link_to 'Show', position
+      %td= link_to 'Edit', edit_position_path(position)
+      %td= link_to 'Destroy', position, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Position', new_position_path

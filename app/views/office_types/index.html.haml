@@ -1,0 +1,21 @@
+%h1 Listing office_types
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+    %th
+    %th
+
+  - @office_types.each do |office_type|
+    %tr
+      %td= office_type.name
+      %td= office_type.description
+      %td= link_to 'Show', office_type
+      %td= link_to 'Edit', edit_office_type_path(office_type)
+      %td= link_to 'Destroy', office_type, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Office type', new_office_type_path

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @office.name
+%p
+  %b Region:
+  = @office.region.name
+%p
+  %b Office type:
+  = @office.office_type.name
+
+= link_to 'Edit', edit_office_path(@office)
+\|
+= link_to 'Back', offices_path

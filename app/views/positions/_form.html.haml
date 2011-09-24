@@ -1,0 +1,11 @@
+= simple_form_for(@position) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :name
+    = f.input :year
+    = f.association :person, :label_method => lambda { |x| x.full_name }
+    = f.association :office
+
+  .actions
+    = f.button :submit

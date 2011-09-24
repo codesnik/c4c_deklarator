@@ -1,0 +1,21 @@
+%h1 Listing regions
+
+%table
+  %tr
+    %th Name
+    %th Code
+    %th
+    %th
+    %th
+
+  - @regions.each do |region|
+    %tr
+      %td= region.name
+      %td= region.code
+      %td= link_to 'Show', region
+      %td= link_to 'Edit', edit_region_path(region)
+      %td= link_to 'Destroy', region, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Region', new_region_path

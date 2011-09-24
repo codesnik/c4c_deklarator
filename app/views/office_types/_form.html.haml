@@ -1,0 +1,9 @@
+= simple_form_for(@office_type) do |f|
+  = f.error_notification
+
+  .inputs
+    = f.input :name
+    = f.input :description
+
+  .actions
+    = f.button :submit

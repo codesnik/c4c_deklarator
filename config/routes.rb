@@ -1,5 +1,12 @@
 C4cDeklarator::Application.routes.draw do
 
+  resources :positions
+
+  resources :offices
+  resources :office_types
+  resources :regions
+  resources :people
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users

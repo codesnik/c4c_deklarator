@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @position.name
+%p
+  %b Year:
+  = @position.year
+%p
+  %b Person:
+  = @position.person.full_name
+%p
+  %b Office:
+  = @position.office.name
+
+= link_to 'Edit', edit_position_path(@position)
+\|
+= link_to 'Back', positions_path

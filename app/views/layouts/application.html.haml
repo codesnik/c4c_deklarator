@@ -8,9 +8,12 @@
         = render :partial => 'layouts/header'
 
       #main{ :role => 'main' }
+        %nav#main_navigation
+          = render_navigation :context => :main
         %section#mainContent
           = flash_messages
           = yield
+
 
 
       %footer

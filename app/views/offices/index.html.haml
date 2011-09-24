@@ -1,0 +1,23 @@
+%h1 Listing offices
+
+%table
+  %tr
+    %th Name
+    %th Region
+    %th Office type
+    %th
+    %th
+    %th
+
+  - @offices.each do |office|
+    %tr
+      %td= office.name
+      %td= office.region.name
+      %td= office.office_type.name
+      %td= link_to 'Show', office
+      %td= link_to 'Edit', edit_office_path(office)
+      %td= link_to 'Destroy', office, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Office', new_office_path
