@@ -31,6 +31,7 @@ gem "jquery-rails"
 gem "rails-backbone"
 
 gem "flash_messages_helper"
+gem "country-select"
 gem "rails_config"
 gem "rails_admin", :git => "git://github.com/sferik/rails_admin.git"
 gem "high_voltage"
