@@ -68,11 +68,14 @@ SimpleNavigation::Configuration.run do |navigation|
 
 
     primary.item :home, 'Home', root_url
-    primary.item :regions, 'Regions', regions_url
-    primary.item :office_types, 'Office Types', office_types_url
+    primary.item :admin, 'Admin', rails_admin_url
+    # primary.item :regions, 'Regions', regions_url
+    # primary.item :office_types, 'Office Types', office_types_url
     primary.item :offices, 'Offices', offices_url
     primary.item :persons, 'Persons', people_url
     primary.item :positions, 'Positions', positions_url
+
+    primary.item :declarations, 'Declarations', declarations_url
   end
 
 end

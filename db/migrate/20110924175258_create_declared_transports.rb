@@ -1,6 +1,8 @@
 class CreateDeclaredTransports < ActiveRecord::Migration
   def change
     create_table :declared_transports do |t|
+      t.references :declaration
+      t.references :owned_via_type
       t.string :name
       t.references :transport_type
       t.references :car_vendor

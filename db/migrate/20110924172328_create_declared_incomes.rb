@@ -2,6 +2,7 @@ class CreateDeclaredIncomes < ActiveRecord::Migration
   def change
     create_table :declared_incomes do |t|
       t.references :declaration
+      t.references :owned_via_type
       t.float :amount
       t.text :description
 

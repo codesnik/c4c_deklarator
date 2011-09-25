@@ -1,25 +1,22 @@
 C4cDeklarator::Application.routes.draw do
 
-  resources :declared_transports
+  root :to => "home#index"
 
-  resources :declared_real_estates
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  resources :declared_incomes
+  resources :office_types
+  resources :regions
+
+  resources :offices
+  resources :people
+  resources :positions
 
   resources :declarations
 
-  resources :positions
-
-  resources :offices
-  resources :office_types
-  resources :regions
-  resources :people
-
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
-  devise_for :users
-
-  root :to => "home#index"
+  resources :declared_transports
+  resources :declared_real_estates
+  resources :declared_incomes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

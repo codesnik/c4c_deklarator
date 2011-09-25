@@ -1,6 +1,7 @@
 class CreateDeclarations < ActiveRecord::Migration
   def change
     create_table :declarations do |t|
+      t.references :person
       t.string :name
       t.references :declaration_type
       t.date :published_at

@@ -2,6 +2,7 @@ class CreateDeclaredRealEstates < ActiveRecord::Migration
   def change
     create_table :declared_real_estates do |t|
       t.references :declaration
+      t.references :owned_via_type
       t.string :name
       t.references :read_estate_type
       t.float :area

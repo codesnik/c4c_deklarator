@@ -2,6 +2,10 @@
 
 %p
   %b Name:
+  = @declaration.person#.full_name
+
+%p
+  %b Name:
   = @declaration.name
 %p
   %b Declaration type:
@@ -14,7 +18,7 @@
   = @declaration.for_year
 %p
   %b Office:
-  = @declaration.office
+  = @declaration.office.name if @declaration.office
 
 = link_to 'Edit', edit_declaration_path(@declaration)
 \|

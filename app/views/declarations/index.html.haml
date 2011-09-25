@@ -2,7 +2,8 @@
 
 %table
   %tr
-    %th Name
+    %th Person
+    %th Declaration Name
     %th Declaration type
     %th Published at
     %th For year
@@ -13,11 +14,12 @@
 
   - @declarations.each do |declaration|
     %tr
+      %td= declaration.person.full_name
       %td= declaration.name
-      %td= declaration.declaration_type
+      %td= declaration.declaration_type.name
       %td= declaration.published_at
       %td= declaration.for_year
-      %td= declaration.office
+      %td= declaration.office.name if declaration.office
       %td= link_to 'Show', declaration
       %td= link_to 'Edit', edit_declaration_path(declaration)
       %td= link_to 'Destroy', declaration, :confirm => 'Are you sure?', :method => :delete

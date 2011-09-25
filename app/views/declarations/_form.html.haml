@@ -2,11 +2,18 @@
   = f.error_notification
 
   .inputs
+    = f.association :person, :label_method => lambda { |x| x.full_name }
     = f.input :name
     = f.association :declaration_type
     = f.input :published_at
     = f.input :for_year
     = f.association :office
+
+    - f.simple_fields_for :declared_income do |declared_income|
+      = render 'declared_income_fields', :f => declared_income
+
+    %p
+      = link_to_add_fields "Add Income", f, :declared_incomes
 
   .actions
     = f.button :submit
